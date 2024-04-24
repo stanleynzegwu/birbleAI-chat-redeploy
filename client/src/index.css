@@ -1,0 +1,195 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  * {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+
+  /* Scrollbar Styles */
+  div::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+
+  #root div {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: rgb(47, 47, 74, 0.8);
+  }
+
+  .chat_container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+  }
+  /* hides scrollbar */
+  .chat_container::-webkit-scrollbar {
+    display: none;
+  }
+
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
+
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
+
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
+
+    /* .wrapper {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+    } */
+
+    /* .ai {
+      background: #40414F;
+    } */
+
+    /* .chat {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+    
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10px;
+    } */
+    
+    /* .profile {
+      width: 36px;
+      height: 36px;
+      border-radius: 5px;
+    
+
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } */
+    
+    /* .ai .profile {
+      background: #10a37f;
+    } */
+    
+    /* .profile img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+    } */
+ 
+    /* .message {
+      flex: 1;
+    
+      color: #dcdcdc;
+    
+      max-width: 100%;
+      overflow-x: scroll;
+      white-space: pre-wrap; 
+    
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    } */
+  }
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+    .wrapper {
+      @apply w-full p-2 md:p-3 rounded-2xl;
+    }
+
+    .ai {
+      @apply bg-[#31314e];
+    }
+
+    .chat {
+      @apply w-full max-w-[1280px] mx-0 my-auto flex flex-row items-start gap-[10px];
+    }
+
+    .profile {
+      @apply w-[30px] h-[36px] rounded-[5px] flex justify-between items-center;
+
+    }
+
+    .profile_Img {
+      @apply w-[60px] h-[60px] object-contain;
+    }
+
+    .message {
+      @apply flex-1 text-[#dcdcdc] max-w-full overflow-scroll whitespace-pre-wrap;
+
+    }
+  }
